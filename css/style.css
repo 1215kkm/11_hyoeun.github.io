@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+body {}
+header {width: 0px; background: #1e1e1e; position: fixed; left: 50%; z-index: 777;  top: 50%; transform: translateY(-50%); transition: 1s;}
+header nav {width: 170px; height: 300px; ;position: relative; }
+header .catebox {width: 170px; height: 250px; /*  position: relative; top: 150%;; top: 150px; left: 30px; */ }
+header .catebox li {width: 150px; height: 30px; /* background: #ddd; */ position: relative; right: 0; margin-bottom: 62px; opacity: 0; cursor: pointer; transition: 1s;}  
+header .catebox li figure {width: 26px; height: 26px; float: left; margin-right: 18px; margin-top: 2px;}
+header .catebox li figure img {width: 100%; }
+header .catebox li span {color: #fff; float: left; line-height: 30px; font-size: 19px; transition: .2s;}
+header .catebox li:hover span {color: #ffd15c;}
+header button {width: 23px; height: 23px; background: #000; border-radius: 50%; position: absolute; bottom: -180px; left: 140px; transform: translateX(-50%); transition: .2s; opacity: 0;} 
+header button figure {width: 22px; height: 22px; position: relative; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+header button figure img {margin-top: 3px;}
+/* header button:hover {width: 30px; height: 30px;}
+header button:hover figure {width: 27px; height: 27px;} */
+
+header .catebox.on li {animation: cate_text 1s forwards;}
+  @keyframes cate_text {
+    0% {opacity: 0;}
+    30% {opacity: 1;}
+    60% {opacity: 0.3;}
+    100% {opacity: 1;}
+  }
+header .catebox li:nth-child(1) {left: -250px; animation-delay: 0.5s;}
+header .catebox li:nth-child(2) {left: -350px; animation-delay: 0.6s;}
+header .catebox li:nth-child(3) {left: -400px; animation-delay: 0.7s;}
+header .catebox li:nth-child(4) {left: -350px; animation-delay: 0.8s;}
+header .catebox li:nth-child(5) {left: -250px; animation-delay: 0.9s;}
+header .catebox li:hover span {color: #ffd15c;}
+
+header.on {left: 0;}
+header.on .catebox li:nth-child(1) {left: 70px;}
+header.on .catebox li:nth-child(2) {left: 70px;}
+header.on .catebox li:nth-child(3) {left: 70px;}
+header.on .catebox li:nth-child(4) {left: 70px;}
+header.on .catebox li:nth-child(5) {left: 70px;}
+header.on button {opacity: 1;}
+
+/* header .catebox {width: auto; height: 410px;  position: absolute;
+  left: 50%; top: 50%; transform: translate(-50%, -50%) translateX(-220px);}
+  header .catebox li {width: 150px; height: 30px;  position: relative; left: 0; margin-bottom: 62px; opacity: 0; cursor: pointer;}  
+  header .catebox li figure {width: 26px; height: 26px; float: left; margin-left: 18px; margin-top: 2px;}
+  header .catebox li figure img {width: 100%; }
+  header .catebox li span {color: #fff; float: left; line-height: 30px; font-size: 19px; transition: .2s;}
+  
+  
+
+   */
+
+
+
+
+
+
+
+
+.pink_rbox {width: 150px; height: 43px; background: #ff4c60; border-radius: 20px; position: absolute;
+font-family: 'Righteous'; font-size: 20px; text-align: center; color: #fff; line-height: 43px;} 
+
+#visual {background: #1e1e1e; position: relative; height: 100vh; width: 100%;}
+#visual .textbox_bg {background: #1e1e1e; position: absolute; top: 0; left: 0; height: 100vh; width: 100%;}
+#visual .textbox_bg.on {background: #1e1e1e url(../images/mvisual.png) center no-repeat; animation: textscale 4s forwards;}
+@keyframes textscale {
+  0% {transform: scale(0); opacity: 0;}
+  50% {transform: scale(1); opacity: 1;}
+  70% {opacity: 0.5;} 
+  100% {opacity: 1;} 
+}
+
+#visual .pink_rbox {width: 150px; height: 43px; background: #ff4c60; border-radius: 20px; top: 50%; left: 50%; transform: translate(-50%, -50%);
+margin-top: 200px; animation: boxlight 3s infinite linear; opacity: 0; cursor: pointer;}
+@keyframes boxlight {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  50% {opacity: 0;}
+  75% {opacity: 1;}
+}
+
+/* 원 생기면 미모티콘 margin-lef:0 scale:0.9 */
+#visual .yellow_circle { position: absolute; border-radius: 50%;
+left: 50%; top: 50%; transform: translate(-50%, -50%);transition: 1s;}
+#visual .yellow_circle.on {border-radius: 50%;background: #f9d74c;}
+
+#visual .memoji_visual {background: url(../images/memoji_visual.png) center no-repeat; width: 280px; height: 305px; background-size: cover; margin-left: 50px; transition: .3s ; margin-top: 7px;}
+
+  
+
+
+#visual .intro {width: 317px; height: 97px; position: absolute; opacity: 0;
+  left: 42.3%; top: 43%; transform: translate(0, -0); font-family: 'Righteous'; transition: 1s;}
+#visual .intro.on {transform: translate(158px, -188px);left: 52%; top: 50%; opacity:1}
+
+#visual .intro strong {display: block; color: #fff; font-size: 56px;}
+#visual .intro span {color: #fff; ; font-size: 25px}
+
+/* 공통 */
+#section_box {background: #1e1e1e;}
+#section_box::after {content: ""; display: block; clear: both;;}
+#section_box section {padding: 100px 220px; background: #fafaff;float: right;transition: 1s; }
+#section_box section .titbox {width: 250px; height: 70px; margin-bottom: 48px;}
+#section_box section .titbox figure {width: 30px; height: 48px; float: left; margin-right: 20px;}
+#section_box section .titbox figure img {height: 100%;}
+#section_box section .titbox h3 {float: left; font-family: 'Righteous'; font-size: 40px; color: #454360;}
+
+
+/* 섹션1 */
+#section1 {width: 100%; height: auto; /* border: 10px solid red; */ position: relative; right: 0; }
+#section1.on {width: calc(100% - 270px); }
+#section1 .contbox > div {position: relative; width: 1000px; height: 412px; margin: 0 auto; }
+
+#section1 .who figure {margin-left: 37px; position: absolute; z-index: 8;}
+#section1 .who .talkbox {width: 780px; height: 272px; background: #fff; box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+padding: 40px 60px; border-radius: 20px; margin-left: 180px; bottom: 0; position: absolute; font-size: 20px;
+color: #656565; line-height: 33px; word-break: keep-all; white-space: pre-line;}
+#section1 .who .talkbox i {font-weight: 600; font-style: normal; }
+#section1 .who .talkbox i:nth-child(1) {color: #6c6ce5;}
+#section1 .who .talkbox i:nth-child(2) {color: #ff4c60;}
+#section1 .who .talkbox i:nth-child(3) {color: #3b3b3b;}
+
+#section1 .skill {padding: 78px 90px;}
+#section1 .skill li {width: 375px; height: 50px; display: inline-block;} 
+
+#section1 .skill .titarea {width: 100%; height: 20px; font-size: 18px;}
+#section1 .skill .titarea strong {float: left; font-family: 'Righteous'; font-weight: normal;}
+#section1 .skill .titarea span {float: right; color: #777;}
+
+#section1 .skill li {margin-bottom: 32px; margin-right: 50px;}
+#section1 .skill li:nth-child(even) {margin-right: 0px;}
+#section1 .skill li .graph {width: 100%; height: 7px; background: #f1f1f1; border-radius: 4px; margin-top: 18px;}
+#section1 .skill li:nth-child(1) .graph .colorgraph {width: 0%; height: 7px; background: #ffd15c; border-radius: 4px;}
+#section1 .skill li:nth-child(2) .graph .colorgraph {width: 0%; height: 7px; background: #ff4c60; border-radius: 4px;}
+#section1 .skill li:nth-child(3) .graph .colorgraph {width: 0%; height: 7px; background: #6c6ce5; border-radius: 4px;}
+#section1 .skill li:nth-child(4) .graph .colorgraph {width: 0%; height: 7px; background: #ffd15c; border-radius: 4px;}
+#section1 .skill li:nth-child(5) .graph .colorgraph {width: 0%; height: 7px; background: #ff4c60; border-radius: 4px;}
+
+#section1 .certificate ul {display: flex; width: 600px; height: 258px; margin: 92px auto 0 auto;}
+#section1 .certificate li {width: 250px; height: 250px; border-radius: 50%; display: flex; overflow: hidden;
+  flex-direction: column; background: #6c6ce5; align-items: center; justify-content: center; gap: 15px;}
+#section1 .certificate li figure {width: 150px; height: 125px; position: relative; top: -20px;}
+#section1 .certificate li figure img {width: 100%;}
+#section1 .certificate li strong {color: #fff; font-size: 25px;}
+#section1 .certificate li span {color: #fff; font-size: 15px;}
+
+#section1 .certificate li:nth-child(2) {background: #f9d74c; margin-left: 90px;}
+#section1 .certificate li:nth-child(2) strong,
+#section1 .certificate li:nth-child(2) span {color: #454360;}
+
+#section1 .mbti {padding: 50px 30px;/*  border: 1px solid; */}
+#section1 .mbti .puzzle {position: relative; height: 300px; z-index: 8;}
+#section1 .mbti .puzzle figure {width: 316px; height: 316px; position: absolute;
+left: 50%; transform: translateX(-50%); transition: .5s;}
+#section1 .mbti .puzzle figure img:nth-child(1) {position: absolute; left: 32px; top: 32px;}
+#section1 .mbti .puzzle figure img:nth-child(2) {position: absolute; right: 32px; top: 32px;}
+#section1 .mbti .puzzle figure img:nth-child(3) {position: absolute; left: 32px; bottom: 32px;}
+#section1 .mbti .puzzle figure img:nth-child(4) {position: absolute; right: 32px; bottom: 32px;}
+#section1 .mbti .puzzle strong {font-size: 50px; color: #454360; font-family: 'Righteous'; position: absolute;
+left: 50%; transform: translateX(-50%); margin-top: 127px; transition: .5s;}
+/*왼쪽 이동시 변화 좌표 
+#section1 .mbti .puzzle figure img:nth-child(1) {position: absolute; left: 0; top: 0;}
+#section1 .mbti .puzzle figure img:nth-child(2) {position: absolute; right: 0; top: 0;}
+#section1 .mbti .puzzle figure img:nth-child(3) {position: absolute; left: 0; bottom: 0;}
+#section1 .mbti .puzzle figure img:nth-child(4) {position: absolute; right: 0; bottom: 0;}
+*/
+
+#section1 .mbti .textbox {width: 618px; height: 290px; text-align: center; font-size: 24px;
+word-break: keep-all; white-space: pre-line; line-height: 40px; position: absolute; right: 0px; opacity: 0; margin-top: 13px; }
+#section1 .mbti .textbox i {color: #6c6ce5; font-weight: 600; font-style: normal;}
+#section1 .mbti .textbox em {color: #ff4c60; font-weight: 600; font-style: normal;}
+#section1 .mbti .textbox span {position: relative;}
+
+
+/* 섹션2 */
+#section_box section {padding: 100px 220px; position: relative;}
+#section_box section#section2 {width: 100%; height: auto; position: relative; 
+background:#fafaff} 
+#section_box section#section2.on {width: calc(100% - 270px);}
+
+#section2 .road {width: 100%; height: 100%;position: absolute; left: 0;top: 326px;}
+.st0{opacity:0.5;}
+.st1{fill:none;stroke:#aaa;stroke-width:4;stroke-miterlimit:10;}
+.st2{fill:none;stroke:#aaa;stroke-width:4;stroke-miterlimit:10;stroke-dasharray:19.9465,14.9598;}
+#section2 .road svg {width: 1660px; animation: road 10s linear infinite;}
+@keyframes road {
+  0% {stroke-dashoffset:0}
+  100% {stroke-dashoffset:-2000px}
+}
+
+#km {width: 300px;}
+
+#section2 ul {position: relative; left: -170px; top: 55px; width: 1500px;} 
+#section2 ul li {display: inline-block; text-align: center; margin-right: 175px; position: relative;}
+#section2 ul li:nth-child(6) {margin-right: 0;}
+#section2 ul li:nth-child(7) {margin-left: 180px;}
+#section2 ul li:nth-child(10) {margin-right: 0;}
+#section2 ul li:nth-child(11) {margin-left: 140px;}
+
+#section2 ul li p {font-size: 21px;}
+#section2 ul li span.date {font-size: 16px; color: #8a8a8a;}
+
+#section2 ul li.line2 {margin-top: 310px;}
+#section2 ul li.line2 {margin-right: 180px;}
+
+#section2 ul li.line3 {margin-top: 220px;}
+#section2 ul li.line3 {margin-right: 230px;}
+
+/* 이미지들, 원 */
+#section2 ul li:nth-child(1) span.circle {position: absolute; width: 27px; height: 27px; border-radius: 50%; background: #6c6ce5;
+left: 50%; transform: translateX(-50%); top: 45px}
+
+#section2 ul li:nth-child(1) figure {position: absolute;}
+#section2 ul li:nth-child(1) figure img.tree {position: relative; top:-120px;}
+#section2 ul li:nth-child(1) figure img.age {position: relative; top:-34px; left: 50px;}
+
+#section2 ul li:nth-child(5) span.circle {position: absolute; width: 27px; height: 27px; border-radius: 50%; background: #f9d74c;
+left: 50%; transform: translateX(-50%); top: 45px}
+
+#section2 ul li:nth-child(5) figure {position: absolute;}
+#section2 ul li:nth-child(5) figure img.supervisor {position: relative; top:-110px; left: -53px;}
+#section2 ul li:nth-child(5) figure img.visor_text {position: relative; top:-30px; left: -43px;}
+
+#section2 ul li:nth-child(13) span.circle {position: absolute; width: 27px; height: 27px; border-radius: 50%; background: #ff4c60;
+left: 50%; transform: translateX(-50%); top: -36px}
+
+#section2 ul li:nth-child(13) figure {position: absolute;}
+#section2 ul li:nth-child(13) figure img.absence {position: relative; top:-170px; left: -53px;}
+#section2 ul li:nth-child(13) figure img.percent {position: relative; top:-170px; left: -48px;}
+
+
+/* 섹션3 */
+#section_box #section3 {width: 100%; height: auto; position: relative; }
+#section_box #section3.on {width: calc(100% - 270px);}
+#section_box #section3 .titbox {margin-bottom: 10px;}
+
+#section3 nav {width: 100%; height: 40px;}
+#section3 nav ul {display: flex; height: 100%;}
+#section3 nav ul li {line-height: 40px; margin: 0 10px; font-family: 'Righteous'; }
+#section3 nav ul li a {display: block; padding: 0 30px; font-size: 23px; color: #454360;}
+#section3 nav ul li.on a,
+#section3 nav ul li:hover a {color: #ff4c60;}
+
+#section3 .content {width: 1200px; margin: 50px auto; min-height: 500px;}
+#section3 .content ul {display: flex; flex-wrap: wrap; gap: 60px; justify-content: center;}
+#section3 .content ul li {width: 330px; height: 276px; display: inline-block; text-align: center; border-radius: 20px;
+background: #fff; box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);}
+
+#section3 .content ul li.pub {background: lightblue;}
+#section3 .content ul li.web {background: lightcoral;}
+#section3 .content ul li.banner {background: lightgreen;}
+
+#section3 .pink_rbox {width: 150px; height: 43px; background: #ff4c60; border-radius: 20px; left: 50%; transform: translateX(-50%);
+cursor: pointer; position: relative;}
+
+/* 섹션4 */
+#section_box #section4 {width: 100%; height: auto; position: relative;  padding-top: 20px;}
+#section_box #section4.on {width: calc(100% - 270px);}
+
+#section4 .who figure {text-align: center;}
+#section4 .who .talkbox {width: 750px; height: 140px; background: url(../images/roundract.png) center no-repeat; 
+background-size: cover; padding: 35px 60px; position: relative; font-size: 30px; margin: 30px auto 0 auto; text-align: center;
+color: #454360; line-height: 40px; word-break: keep-all; white-space: pre-line; font-weight: 600;}
+#section4 .pink_rbox {width: 150px; height: 43px; background: #ff4c60; border-radius: 20px; left: 50%; transform: translateX(-50%);
+cursor: pointer; position: relative; margin-top: 30px;}
+
+
+
+
+  
